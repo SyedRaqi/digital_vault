@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#050506">
+  <meta name="description" content="Protect files and folders on this PC with local face verification and encryption.">
+  <title>Face Vault — Your files. Your face. Your control.</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="stage" id="stage">
+    <div class="backdrop" aria-hidden="true">
+      <div class="backdrop__base"></div>
+      <div class="backdrop__spotlight parallax-layer" data-depth=".28"></div>
+      <div class="backdrop__grid parallax-layer" data-depth=".55"></div>
+      <canvas class="particles" id="particles" aria-hidden="true"></canvas>
+      <div class="backdrop__grain"></div>
+      <div class="backdrop__vignette"></div>
+    </div>
+
+    <section class="vault-shell" id="vault-shell">
+      <header class="vault-topbar">
+        <a class="vault-brand" href="/" aria-label="Face Vault home">
+          <svg class="vault-brand__icon" viewBox="0 0 120 136" aria-hidden="true">
+            <path d="M60 5 109 32v43c0 28-21 45-49 56C32 120 11 103 11 75V32L60 5Z" fill="none" stroke="#8a8a94" stroke-width="2"/>
+            <circle cx="60" cy="65" r="25" fill="none" stroke="#8a8a94" stroke-width="2"/>
+            <path d="M60 53a7 7 0 0 0-4 12.8V77h8V65.8A7 7 0 0 0 60 53Z" fill="#c9a96a"/>
+          </svg>
+          <span>FACE<span class="vault-brand__underscore">_</span>VAULT</span>
+        </a>
+        <span class="vault-topbar__status"><i></i> LOCAL · FACE VERIFIED</span>
+      </header>
+
+      <section class="landing" id="landing" aria-labelledby="page-title">
+        <div class="landing__copy">
+          <p class="eyebrow"><span></span> YOUR PRIVATE SPACE</p>
+          <h1 id="page-title">Your files.<br><em>Your face.</em></h1>
+          <p class="landing__description">A personal vault for the files and folders you want to keep private. Protected on this PC with live face verification and strong encryption.</p>
+          <div class="landing__actions">
+            <a class="primary-button primary-button--link" href="http://localhost:8000/" target="_blank" rel="noopener">
+              <span>Open Face Vault</span><span aria-hidden="true">↗</span>
+            </a>
+            <span class="landing__note">Local app · Camera required · Optional AI services</span>
+          </div>
+          <div class="landing__trust">
+            <span><b>01</b> LIVE FACE VERIFICATION</span>
+            <span><b>02</b> FILES ENCRYPTED ON THIS PC</span>
+            <span><b>03</b> PRIVATE BY DESIGN</span>
+          </div>
+        </div>
+        <div class="landing__art" aria-hidden="true">
+          <div class="orbit orbit--outer"></div><div class="orbit orbit--inner"></div>
+          <div class="art-cross art-cross--one"></div><div class="art-cross art-cross--two"></div>
+          <div class="art-seal">
+            <svg viewBox="0 0 120 136">
+              <path d="M60 5 109 32v43c0 28-21 45-49 56C32 120 11 103 11 75V32L60 5Z" fill="none" stroke="url(#seal-metal)" stroke-width="1.5"/>
+              <circle cx="60" cy="65" r="31" fill="none" stroke="url(#seal-metal)" stroke-width="1.5"/>
+              <circle cx="60" cy="65" r="23" fill="none" stroke="url(#seal-metal)" stroke-width="1.5"/>
+              <path d="M60 34v8M91 65h-8M60 96v-8M29 65h8" fill="none" stroke="#787780"/>
+              <path d="M60 52a8 8 0 0 0-4.5 14.6V78h9V66.6A8 8 0 0 0 60 52Z" fill="#c9a96a"/>
+              <defs><linearGradient id="seal-metal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#3a3a42"/><stop offset="1" stop-color="#c9a96a"/></linearGradient></defs>
+            </svg>
+          </div>
+          <span class="art-coordinate art-coordinate--top">FIG. 01 <i></i> YOUR FACE IS THE KEY</span>
+          <span class="art-coordinate art-coordinate--bottom">LOCKED TO THIS DEVICE <i></i> AES-GCM</span>
+        </div>
+      </section>
+
+      <footer class="vault-footer"><span>PRIVATE BY DESIGN</span><i></i><span>EST. IN SILENCE</span><span class="vault-footer__right">A QUIET PLACE, ON YOUR TERMS.</span></footer>
+    </section>
+  </main>
+  <script src="background.js" defer></script>
+</body>
+</html>
